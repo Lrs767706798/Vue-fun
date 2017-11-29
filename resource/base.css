@@ -1,0 +1,25 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+	font-size: 100px;
+	font-family: "微软雅黑";
+	color: #333;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+.clearfix{
+	zoom: 1;
+}
+.clearfix:after{
+	display: block;
+	height: 0;
+	content: "";
+	clear: both;
+	visibility: hidden;
+}
