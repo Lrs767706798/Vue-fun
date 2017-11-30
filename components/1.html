@@ -9,8 +9,9 @@
 	</head>
 	<style type="text/css">
  		.header-bg{
- 			position: relative;
+ 			position: fixed;
  			width: 100%;
+ 			top: 0;
  			height:0.5rem;
  			box-sizing: border-box;
  			border-bottom: 1px solid #ccc;
@@ -59,7 +60,8 @@
  			height: 0.5rem;
  			background-color: #eee;
  			position: absolute;
- 			top: 0;
+ 			top: -0.5rem;
+			transition: all 0.3s;
  		}
  		.search{
 			margin: auto;
@@ -94,8 +96,14 @@
  			width: 0.25rem;
  			height: 0.25rem;
  			position: absolute;
-
-
+ 		}
+ 		.search .placehold{
+ 			font-size: 0.12rem;
+ 			position: absolute;
+ 			top: 0.17rem;
+ 			color: #ccc;
+ 			text-indent: 0.15rem;
+ 			letter-spacing: 0;
  		}
 	</style>
 	<body>
@@ -108,14 +116,22 @@
 				</div>
 				<div class="search-bg">
 					<div class="search">
-						<input type="text" placeholder="Please enter the goods you want to search "/>
+						<input class="search-cont" type="text"  />
+						<span class="placehold">Please enter the goods you want to search</span>
 						<a href="javascripty:;"><img src="../resource/images/搜索.png" class="search-img"></img></a>
 					</div>
 				</div>
 			</div>
 		
 		<script>
-			
+			 $(function(){
+			 	$(".header-search").click(function(){
+			 		$(".search-bg").animate({top:0},500)
+			 	})
+			 	$(".search-cont").focus(function(){
+			 		$(".placehold").css("display","none");
+			 	})
+			 })
 		</script>
 	</body>
 </html>

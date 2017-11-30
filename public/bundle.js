@@ -19475,7 +19475,7 @@ exports = module.exports = __webpack_require__(7)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n.header-bg{\n \t\t\tposition: fixed;\n \t\t\twidth: 100%;\n \t\t\ttop: 0;\n \t\t\theight:0.5rem;\n \t\t\tbox-sizing: border-box;\n \t\t\tborder-bottom: 1px solid #ccc;\n}\n.header{\n \t\t\twidth: 100%;\n \t\t\tposition: relative;\n \t\t\theight: 100%;\n \t\t\tpadding: 0 0.1rem;\n}\n.header span{\n \t \t\tdisplay: inline-block;\n \t \t\tfloat: left;\n \t\t\twidth: 0.35rem;\n \t\t\theight: 0.35rem;\n}\n.header img{\n \t\t \tposition: absolute;\n \t\t\tdisplay: inline-block;\n \t\t\tleft: 0;\n \t\t\ttop:0;\n \t\t\tbottm:0;\n \t\t\tright: 0;\n \t\t\tmargin:auto;\n \t\t\tpadding-top: 0.04rem;\n}\n.header .header-menu{\n \t\t\tbackground: url(" + __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../resource/images/我的订单.png\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())) + ") -5px -6px;\n \t\t\tmargin: 0.05rem 0.1rem 0 0 ;\n}\n.header .header-search{\n \t\t\tbackground: url(" + __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../resource/images/搜索.png\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())) + ");\t\n \t\t\tfloat: right;\n \t\t\tbackground-size:contain;\n \t\t\tmargin: 0.05rem 0.2rem 0 0 ;\n}\n.header .header-home{\n \t\t\tbackground: url(" + __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../resource/images/首页.png\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())) + ");\n \t\t\tbackground-size:contain;\n \t\t\tfloat: left;\n \t\t\tmargin: 0.05rem 0 0 0.05rem ;\n}\n.search-bg{\n \t\t\twidth: 100%;\n \t\t\theight: 0.5rem;\n \t\t\tbackground-color: #eee;\n \t\t\tposition: absolute;\n \t\t\ttop: -0.5rem;\n\t\t\ttransition: all 0.3s;\n}\n.search{\n\t\t\tmargin: auto;\n \t\t\twidth: 3rem;\n \t\t\theight: 100%;\n \t\t\tposition: absolute;\n \t\t\tleft: 0;\n \t\t\ttop: 0;\n \t\t\tbottom: 0;\n \t\t\tright: 0;\n}\n.search input{\n \t\t\twidth: 3rem;\n \t\t\tposition: absolute;\n \t\t\theight: 0.3rem;\n \t\t\tmargin: 0.1rem auto;\n \t\t\toutline: none;\n \t\t\tborder-radius: 20px;\n \t\t\tborder: 1px solid #ccc;\n \t\t\ttext-indent: 1em;\n}\n.search a{\n \t\t\tdisplay: inline-block;\n \t\t\twidth: 0.3rem;\n \t\t\theight: 0.3rem;\n \t\t\tposition: absolute;\n \t\t\tright: 0.02rem;\n \t\t\ttop: 0.13rem;\n}\n.search .search-img{\n \t\t\tdisplay: inline-block;\n \t\t\twidth: 0.25rem;\n \t\t\theight: 0.25rem;\n \t\t\tposition: absolute;\n}\n.search .placehold{\n \t\t\tfont-size: 0.12rem;\n \t\t\tposition: absolute;\n \t\t\ttop: 0.17rem;\n \t\t\tcolor: #ccc;\n \t\t\ttext-indent: 0.15rem;\n \t\t\tletter-spacing: 0;\n}\n", ""]);
 
 // exports
 
@@ -19893,14 +19893,87 @@ module.exports = function normalizeComponent (
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+$(function () {
+	$(".header-search").click(function () {
+		$(".search-bg").animate({ top: 0 }, 500);
+	});
+	$(".search-cont").focus(function () {
+		$(".placehold").css("display", "none");
+	});
+});
 
 /***/ }),
 /* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div')
-},staticRenderFns: []}
+  return _vm._m(0, false, false)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    attrs: {
+      "className": "header-bg"
+    }
+  }, [_c('div', {
+    attrs: {
+      "className": "header"
+    }
+  }, [_c('span', {
+    attrs: {
+      "className": "header-menu"
+    }
+  }), _vm._v(" "), _c('img', {
+    attrs: {
+      "src": __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../resource/images/1.png\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()))
+    }
+  }), _vm._v(" "), _c('span', {
+    attrs: {
+      "className": "header-search"
+    }
+  }), _vm._v(" "), _c('span', {
+    attrs: {
+      "className": "header-home"
+    }
+  })]), _vm._v(" "), _c('div', {
+    attrs: {
+      "className": "search-bg"
+    }
+  }, [_c('div', {
+    attrs: {
+      "className": "search"
+    }
+  }, [_c('input', {
+    attrs: {
+      "className": "search-cont",
+      "type": "text"
+    }
+  }), _vm._v(" "), _c('span', {
+    attrs: {
+      "className": "placehold"
+    }
+  }, [_vm._v("Please enter the goods you want to search")]), _vm._v(" "), _c('a', {
+    attrs: {
+      "href": "javascripty:;"
+    }
+  }, [_c('img', {
+    attrs: {
+      "src": __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../resource/images/搜索.png\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())),
+      "className": "search-img"
+    }
+  })])])])])
+}]}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
