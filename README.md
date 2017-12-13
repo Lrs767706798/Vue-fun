@@ -1,2 +1,3 @@
 # Vue-fun
-Vuex Vue-router
+Vuex
+ Vue-router
